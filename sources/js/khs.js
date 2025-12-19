@@ -136,23 +136,36 @@ function updateIpkProgress(sem) {
   if (Number.isNaN(ipkValue)) return;
 
   const maxIpk = 4.0;
-  const percent = Math.min((ipkValue / maxIpk) * 100, 100);
+  const progress = Math.min((ipkValue / maxIpk) * 100, 100);
 
+  // tentukan warna berdasarkan IPK
+  let colorClass = "bg-danger";
+  if (ipkValue >= 3.5) colorClass = "bg-success";
+  else if (ipkValue >= 3.0) colorClass = "bg-warning";
+
+  // semua target UI IPK
   const targets = [
-    { text: "#ipkTextTarget", bar: "#ipkProgressTarget" },
-    { text: "#ipkTextNilai", bar: "#ipkProgressNilai" },
+    { text: "ipkTextTarget", bar: "ipkProgressTarget" }, // Profil
+    { text: "ipkTextNilai", bar: "ipkProgressNilai" }, // Nilai
   ];
 
   targets.forEach(({ text, bar }) => {
-    const t = document.querySelector(text);
-    const b = document.querySelector(bar);
-    if (!t || !b) return;
+    const textEl = document.getElementById(text);
+    const barEl = document.getElementById(bar);
 
-    t.textContent = `${ipkValue.toFixed(2)} / 4.00`;
+    if (!textEl || !barEl) return;
 
+    // text
+    textEl.textContent = `${ipkValue.toFixed(2)} / 4.00`;
+
+    // reset warna lama
+    barEl.classList.remove("bg-success", "bg-warning", "bg-danger");
+    barEl.classList.add(colorClass);
+
+    // animasi progress
     requestAnimationFrame(() => {
-      b.style.width = percent.toFixed(1) + "%";
-      b.setAttribute("aria-valuenow", ipkValue);
+      barEl.style.width = progress.toFixed(1) + "%";
+      barEl.setAttribute("aria-valuenow", ipkValue);
     });
   });
 }
