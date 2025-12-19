@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portofolio — Ahnaf Ogy Pratista</title>
+    <meta
+      name="description"
+      content="Portofolio kuliah Ahnaf Ogy Pratista: profil, nilai akademik, kegiatan akademik, kontribusi kampus, kegiatan luar kampus, sertifikat."
+    />
+
+    <!-- Bootstrap (layout, offcanvas, table, modal, progress) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="sources/style.css" />
+
+    <!-- Tailwind (Play CDN) — preflight dimatikan agar tidak konflik dengan Bootstrap -->
+    <script>
+      tailwind = {
+        config: {
+          corePlugins: { preflight: false },
+          theme: {
+            extend: {
+              fontFamily: {
+                sans: [
+                  "ui-sans-serif",
+                  "system-ui",
+                  "-apple-system",
+                  "Segoe UI",
+                  "Roboto",
+                  "Arial",
+                ],
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <!-- TOPBAR (mobile) -->
+    <div class="topbar d-lg-none">
+      <div class="d-flex align-items-center justify-content-between px-3 py-2">
+        <div class="d-flex align-items-center gap-2">
+          <span
+            class="rounded-3 px-2 py-1"
+            style="
+              background: rgba(56, 189, 248, 0.14);
+              border: 1px solid rgba(56, 189, 248, 0.3);
+            "
+            >📒</span
+          >
+          <div>
+            <div class="fw-semibold" style="line-height: 1.1">
+              Ahnaf Ogy Pratista
+            </div>
+            <div class="text-muted" style="font-size: 12px">Portofolio</div>
+          </div>
+        </div>
+        <button
+          class="btn btn-sm btn-outline-primary"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#menu"
+          aria-controls="menu"
+        >
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- OFFCANVAS MENU (mobile) -->
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="menu"
+      aria-labelledby="menuLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title fw-semibold" id="menuLabel">Menu</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="d-grid gap-2">
+          <a class="navlink" href="#profil" data-close-offcanvas
+            ><i class="bi bi-person"></i> Profil</a
+          >
+          <a class="navlink" href="#nilai" data-close-offcanvas
+            ><i class="bi bi-bar-chart-line"></i> Nilai Akademik</a
+          >
+          <a class="navlink" href="#kegiatan-akademik" data-close-offcanvas
+            ><i class="bi bi-journal-text"></i> Kegiatan Akademik</a
+          >
+          <a class="navlink" href="#kontribusi" data-close-offcanvas
+            ><i class="bi bi-building"></i> Kontribusi Untuk Kampus</a
+          >
+          <a class="navlink" href="#luar-kampus" data-close-offcanvas
+            ><i class="bi bi-globe"></i> Kegiatan Luar Kampus</a
+          >
+          <a class="navlink" href="#sertifikat" data-close-offcanvas
+            ><i class="bi bi-award"></i> Sertifikat</a
+          >
+          <a class="navlink" href="galeri.html" data-close-offcanvas
+            ><i class="bi bi-images"></i> Galeri</a
+          >
+
+          <a class="navlink" href="#kontak" data-close-offcanvas
+            ><i class="bi bi-envelope"></i> Kontak</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="app">
+      <!-- SIDEBAR (desktop) -->
+      <aside class="sidebar cardx p-3 d-none d-lg-block">
+        <div class="d-flex align-items-center gap-3">
+          <img
+            src="sources/img/Ogy removebg.png"
+            alt="Foto profil"
+            class="rounded-4"
+            style="
+              width: 72px;
+              height: 72px;
+              object-fit: cover;
+              border: 1px solid rgba(148, 163, 184, 0.18);
+            "
+          />
+          <div>
+            <div class="fw-bold" style="font-size: 1.06rem">
+              Ahnaf Ogy Pratista
+            </div>
+            <div class="text-muted" style="font-size: 13px">NIM: 19241601</div>
+            <div class="text-muted" style="font-size: 13px">
+              Sistem Informasi
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-3 d-flex flex-wrap gap-2">
+          <span class="soft"><i class="bi bi-mortarboard"></i> Mahasiswa</span>
+          <span class="soft"><i class="bi bi-code-slash"></i> Web</span>
+          <span class="soft"><i class="bi bi-lightning-charge"></i> Aktif</span>
+        </div>
+
+        <div class="divider my-3"></div>
+
+        <div class="d-grid gap-1">
+          <a class="navlink" href="#profil"
+            ><i class="bi bi-person"></i> Profil</a
+          >
+          <a class="navlink" href="#nilai"
+            ><i class="bi bi-bar-chart-line"></i> Nilai Akademik</a
+          >
+          <a class="navlink" href="#kegiatan-akademik"
+            ><i class="bi bi-journal-text"></i> Kegiatan Akademik</a
+          >
+          <a class="navlink" href="#kontribusi"
+            ><i class="bi bi-building"></i> Kontribusi Kampus</a
+          >
+          <a class="navlink" href="#luar-kampus"
+            ><i class="bi bi-globe"></i> Luar Kampus</a
+          >
+          <a class="navlink" href="#sertifikat"
+            ><i class="bi bi-award"></i> Sertifikat</a
+          >
+          <a class="navlink" href="galeri.html"
+            ><i class="bi bi-images"></i> Galeri</a
+          >
+
+          <a class="navlink" href="#kontak"
+            ><i class="bi bi-envelope"></i> Kontak</a
+          >
+        </div>
+
+        <div class="divider my-3"></div>
+
+        <div
+          class="p-3 rounded-4"
+          style="
+            background: rgba(34, 197, 94, 0.08);
+            border: 1px solid rgba(34, 197, 94, 0.18);
+          "
+        >
+          <div class="fw-semibold">Quick Stats</div>
+          <div class="text-muted" style="font-size: 13px">
+            IPK Semester 1: <b>4.00</b>
+          </div>
+          <div class="text-muted" style="font-size: 13px">
+            IPK Semester 2: <b>3.78</b>
+          </div>
+          <div class="mt-2 text-muted" style="font-size: 12px">
+            Universitas Bina Sarana Informatika Kampus Surakarta
+          </div>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="d-grid gap-3">
+        <!-- HEADER CARD -->
+        <section class="cardx p-4 gridpaper lift">
+          <div class="kicker">Student Dashboard</div>
+          <h1 class="title text-3xl md:text-4xl mt-1">Portofolio</h1>
+          <p class="text-slate-600 mt-2 mb-0">
+            Ringkasan profil, nilai akademik, kegiatan, kontribusi, aktivitas
+            luar kampus, dan sertifikat.
+          </p>
+          <div class="mt-3 d-flex flex-wrap gap-2">
+            <span class="chip"
+              ><i class="bi bi-person-badge"></i> Ahnaf Ogy Pratista</span
+            >
+            <span class="chip"><i class="bi bi-hash"></i> 19241601</span>
+            <span class="chip"
+              ><i class="bi bi-diagram-3"></i> Sistem Informasi</span
+            >
+          </div>
+        </section>
+
+        <!-- PROFIL -->
+        <section id="profil" class="section cardx p-4 lift">
+          <div
+            class="d-flex flex-wrap justify-content-between align-items-start gap-2"
+          >
+            <div>
+              <div class="kicker">Profil Diri</div>
+              <h2 class="title text-2xl md:text-3xl mt-1">Tentang Saya</h2>
+            </div>
+            <div class="d-flex flex-wrap gap-2">
+              <a class="btn btn-outline-primary btn-sm" href="#nilai"
+                ><i class="bi bi-bar-chart-line me-1"></i>Lihat Nilai</a
+              >
+              <a class="btn btn-primary btn-sm" href="#sertifikat"
+                ><i class="bi bi-award me-1"></i>Sertifikat</a
+              >
+            </div>
+          </div>
+
+          <div class="row g-3 mt-1">
+            <div class="col-12 col-lg-7">
+              <div
+                class="p-3 rounded-4"
+                style="
+                  background: rgba(56, 189, 248, 0.1);
+                  border: 1px solid rgba(56, 189, 248, 0.3);
+                "
+              >
+                <div class="fw-semibold">Ringkasan</div>
+                <p class="text-slate-600 mt-2 mb-0">
+                  Saya <b>Ahnaf Ogy Pratista</b> (<b>19241601</b>), mahasiswa
+                  <b
+                    >Sistem Informasi Universitas Bina Sarana Informatika Kampus
+                    Surakarta</b
+                  >
+                  dengan fokus pada <b>Web Development</b>, <b>Data Analyst</b>,
+                  dan <b>Cybersecurity</b>. Saya berorientasi pada perancangan
+                  dan implementasi solusi digital yang terstruktur, aman, dan
+                  mudah digunakan—mulai dari analisis kebutuhan, penyusunan alur
+                  proses, hingga pengembangan aplikasi berbasis web. Portofolio
+                  ini memuat capaian akademik, pengalaman perkuliahan,
+                  kontribusi di lingkungan kampus, aktivitas di luar kampus,
+                  serta dokumentasi sertifikasi sebagai bukti komitmen terhadap
+                  peningkatan kompetensi secara berkelanjutan
+                </p>
+              </div>
+
+              <div class="mt-3 d-flex flex-wrap gap-2">
+                <span class="chip"> Python</span>
+                <span class="chip"> HTML</span>
+                <span class="chip"> CSS</span>
+                <span class="chip"> JS</span>
+                <span class="chip"> MySQL</span>
+                <span class="chip"> PHP</span>
+                <span class="chip"> Laravel</span>
+                <span class="chip"> Kerja Tim</span>
+              </div>
+
+              <div class="divider my-3"></div>
+
+              <div class="row g-3">
+                <div class="col-12 col-md-6">
+                  <div class="cardx p-3 lift" style="box-shadow: none">
+                    <div class="text-muted" style="font-size: 12px">
+                      Target Tahun Ini
+                    </div>
+                    <div class="fw-semibold" style="font-size: 18px">
+                      Naikkan konsistensi IPK
+                    </div>
+                    <div class="text-muted" style="font-size: 13px">
+                      Fokus: manajemen waktu + project nyata
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="cardx p-3 lift" style="box-shadow: none">
+                    <div class="text-muted" style="font-size: 12px">Minat</div>
+                    <div class="fw-semibold" style="font-size: 18px">
+                      Web Developmet + Data Analyst
+                    </div>
+                    <div class="text-muted" style="font-size: 13px">
+                      Analisis proses + implementasi aplikasi
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-5">
+              <div
+                class="p-3 rounded-4"
+                style="border: 1px solid rgba(148, 163, 184, 0.18)"
+              >
+                <div class="d-flex align-items-center justify-content-between">
+                  <div>
+                    <div class="fw-semibold">Data Diri</div>
+                  </div>
+                </div>
+
+                <div class="divider my-3"></div>
+
+                <div class="text-muted" style="font-size: 14px">
+                  <div class="d-flex justify-content-between">
+                    <span>Nama</span><b>Ahnaf Ogy Pratista</b>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span>NIM</span><b>19241601</b>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span>Prodi</span><b>Sistem Informasi</b>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span>Kampus</span><b>UBSI Surakarta</b>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span>Email</span><b>ogypratista81@contoh.com</b>
+                  </div>
+                </div>
+
+                <div class="divider my-3"></div>
+
+                <div class="d-flex flex-wrap gap-2">
+                  <a
+                    class="btn btn-outline-secondary btn-sm"
+                    href="https://github.com/ahnaf0806"
+                    target="_blank"
+                    rel="noreferrer"
+                    ><i class="bi bi-github me-1"></i>GitHub</a
+                  >
+                  <a
+                    class="btn btn-outline-secondary btn-sm"
+                    href="https://linkedin.com/in/ahnaf-ogy-pratista-220002331"
+                    target="_blank"
+                    rel="noreferrer"
+                    ><i class="bi bi-linkedin me-1"></i>LinkedIn</a
+                  >
+                  <a
+                    class="btn btn-outline-secondary btn-sm"
+                    href="/sources/My Curriculum Vitae.pdf"
+                    target="_blank"
+                    rel="noreferrer"
+                    ><i class="bi bi-file-earmark-text me-1"></i>CV</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- NILAI AKADEMIK -->
+        <section id="nilai" class="py-5">
+          <div class="container">
+            <div
+              class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-3"
+            >
+              <h2 class="m-0">Nilai Akademik</h2>
+
+              <div class="d-flex align-items-center gap-2">
+                <label for="semesterSelect" class="m-0 small text-secondary"
+                  >Pilih Semester</label
+                >
+                <select
+                  id="semesterSelect"
+                  class="form-select form-select-sm"
+                  style="max-width: 180px"
+                >
+                  <option value="1">Semester 1</option>
+                  <option value="2">Semester 2</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="small text-secondary mb-2" id="khsNote"></div>
+
+            <div class="table-responsive">
+              <table class="table table-dark table-hover align-middle mb-0">
+                <thead>
+                  <tr>
+                    <th style="width: 70px">No</th>
+                    <th style="width: 110px">Kode</th>
+                    <th>Mata Kuliah</th>
+                    <th style="width: 90px">SKS</th>
+                    <th style="width: 110px">Nilai</th>
+                    <th style="width: 110px">Mutu</th>
+                  </tr>
+                </thead>
+                <tbody id="khsTbody"></tbody>
+              </table>
+            </div>
+
+            <div class="row g-3 mt-3">
+              <div class="col-md-4">
+                <div class="p-3 rounded-3 border bg-dark">
+                  <div class="small text-secondary">Total SKS</div>
+                  <div class="fs-4 fw-semibold" id="khsTotalSks">-</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="p-3 rounded-3 border bg-dark">
+                  <div class="small text-secondary">Total Mutu</div>
+                  <div class="fs-4 fw-semibold" id="khsTotalMutu">-</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="p-3 rounded-3 border bg-dark">
+                  <div class="small text-secondary">IPK / IPS (sesuai KHS)</div>
+                  <div class="fs-4 fw-semibold" id="khsIpk">-</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- KEGIATAN AKADEMIK -->
+        <section id="kegiatan-akademik" class="section cardx p-4 lift">
+          <div class="kicker">Kegiatan Akademik</div>
+          <div class="mt-2">
+            <a
+              href="galeri.html?filter=akademik"
+              class="btn btn-sm btn-primary"
+            >
+              <i class="bi bi-images me-1"></i>Lihat Galeri
+            </a>
+          </div>
+          <h2 class="title text-2xl md:text-3xl mt-1">Kegiatan Akademik</h2>
+
+          <div class="accordion mt-3" id="accAkademik">
+            <!-- Item 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#ak1"
+                  aria-expanded="true"
+                  aria-controls="ak1"
+                >
+                  Seminar Motivasi
+                </button>
+              </h2>
+              <div
+                id="ak1"
+                class="accordion-collapse collapse show"
+                data-bs-parent="#accAkademik"
+              >
+                <div class="accordion-body text-slate-600">
+                  <div
+                    class="mt-3 sheet-photos"
+                    data-sheet-photos
+                    data-title="Seminar Motivasi"
+                    data-category="akademik"
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#ak2"
+                  aria-expanded="false"
+                  aria-controls="ak2"
+                >
+                  Seminar Workshop DEA
+                </button>
+              </h2>
+              <div
+                id="ak2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accAkademik"
+              >
+                <div class="accordion-body text-slate-600">
+                  <p class="mb-3">
+                    Tulis daftar seminar/workshop yang relevan dan apa yang Anda
+                    pelajari.
+                  </p>
+
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-outline-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#imgModal"
+                    data-img-src="https://i.ibb.co/xxxx/foto-akademik-2.jpg"
+                    data-img-title="Seminar / Workshop Kampus"
+                    data-img-caption="Dokumentasi seminar/workshop yang diikuti."
+                  >
+                    <i class="bi bi-image me-1"></i> Lihat Foto
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#ak3"
+                  aria-expanded="false"
+                  aria-controls="ak3"
+                >
+                  Prestasi Akademik (contoh)
+                </button>
+              </h2>
+              <div
+                id="ak3"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accAkademik"
+              >
+                <div class="accordion-body text-slate-600">
+                  <p class="mb-3">
+                    Tulis prestasi: lomba internal, publikasi, beasiswa, atau
+                    peringkat kelas (jika ada).
+                  </p>
+
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-outline-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#imgModal"
+                    data-img-src="https://i.ibb.co/xxxx/foto-akademik-3.jpg"
+                    data-img-title="Prestasi Akademik"
+                    data-img-caption="Dokumentasi sertifikat/hasil capaian akademik."
+                  >
+                    <i class="bi bi-image me-1"></i> Lihat Foto
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- KONTRIBUSI UNTUK KAMPUS -->
+        <section id="kontribusi" class="section cardx p-4 lift">
+          <div class="kicker">Kontribusi untuk Kampus</div>
+          <div class="mt-2">
+            <a href="galeri.html?filter=kampus" class="btn btn-sm btn-primary">
+              <i class="bi bi-images me-1"></i>Lihat Galeri
+            </a>
+          </div>
+          <h2 class="title text-2xl md:text-3xl mt-1">Panitia, & Volunteer</h2>
+
+          <div class="row g-3 mt-1">
+            <div class="col-12 col-md-6">
+              <div class="cardx p-3 lift" style="box-shadow: none">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="bi bi-people" style="color: var(--accent)"></i>
+                  <div class="fw-semibold">Panitia Event Kampus (contoh)</div>
+                </div>
+                <div class="text-slate-600 mt-1">
+                  Tugas: publikasi, dokumentasi, koordinasi peserta, dll.
+                </div>
+                <div class="mt-2 d-flex flex-wrap gap-2">
+                  <span class="chip"
+                    ><i class="bi bi-camera"></i> Dokumentasi</span
+                  >
+                  <span class="chip"
+                    ><i class="bi bi-megaphone"></i> Publikasi</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="cardx p-3 lift" style="box-shadow: none">
+                <div class="d-flex align-items-center gap-2">
+                  <i
+                    class="bi bi-person-check"
+                    style="color: var(--accent2)"
+                  ></i>
+                  <div class="fw-semibold">Mentor / Tutor Sebaya (contoh)</div>
+                </div>
+                <div class="text-slate-600 mt-1">
+                  Bantu teman/angkatan memahami materi atau project.
+                </div>
+                <div class="mt-2 d-flex flex-wrap gap-2">
+                  <span class="chip"
+                    ><i class="bi bi-journal-code"></i> Sharing</span
+                  >
+                  <span class="chip"
+                    ><i class="bi bi-check2"></i> Kolaborasi</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- LUAR KAMPUS -->
+        <section id="luar-kampus" class="section cardx p-4 lift">
+          <div class="kicker">Kegiatan di Luar Kampus</div>
+          <div class="mt-2">
+            <a href="galeri.html?filter=luar" class="btn btn-sm btn-primary">
+              <i class="bi bi-images me-1"></i>Lihat Galeri
+            </a>
+          </div>
+          <h2 class="title text-2xl md:text-3xl mt-1">
+            Kegiatan saya diluar kampus
+          </h2>
+
+          <div class="row g-3 mt-1">
+            <div class="col-12 col-lg-4">
+              <div
+                class="p-3 rounded-4 lift"
+                style="border: 1px solid rgba(148, 163, 184, 0.18)"
+              >
+                <div class="fw-semibold">
+                  <i
+                    class="bi bi-chat-left-dots me-1"
+                    style="color: var(--accent)"
+                  ></i
+                  >Komunitas
+                </div>
+                <div class="text-slate-600 mt-1">
+                  Ikut meetup/belajar bareng, kontribusi mini project.
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div
+                class="p-3 rounded-4 lift"
+                style="border: 1px solid rgba(148, 163, 184, 0.18)"
+              >
+                <div class="fw-semibold">
+                  <i
+                    class="bi bi-briefcase me-1"
+                    style="color: var(--accent2)"
+                  ></i
+                  >Freelance (opsional)
+                </div>
+                <div class="text-slate-600 mt-1">
+                  Landing page UMKM, profil usaha, galeri, kontak.
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div
+                class="p-3 rounded-4 lift"
+                style="border: 1px solid rgba(148, 163, 184, 0.18)"
+              >
+                <div class="fw-semibold">
+                  <i class="bi bi-trophy me-1" style="color: #f59e0b"></i
+                  >Kompetisi
+                </div>
+                <div class="text-slate-600 mt-1">
+                  Lomba luar kampus, hackathon, atau challenge online.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SERTIFIKAT -->
+        <section id="sertifikat" class="section cardx p-4 lift">
+          <div class="kicker">Sertifikat</div>
+          <div
+            class="d-flex flex-wrap justify-content-between align-items-end gap-2"
+          >
+            <h2 class="title text-2xl md:text-3xl mt-1">
+              Dokumen & Bukti Kegiatan
+            </h2>
+            <div class="d-flex flex-wrap gap-2">
+              <a
+                href="galeri.html?filter=sertifikat"
+                class="btn btn-sm btn-primary"
+              >
+                <i class="bi bi-images me-1"></i> Lihat Galeri Sertifikat
+              </a>
+            </div>
+          </div>
+
+          <div class="row g-3 mt-2" id="certGrid">
+            <!-- Sertifikat Card (duplikasi untuk tambah) -->
+            <div
+              class="col-12 col-md-6 col-lg-4 cert"
+              data-category="course"
+              data-title="Sertifikat Kursus (contoh)"
+              data-org="Platform"
+              data-date="2025"
+              data-desc="Deskripsi singkat sertifikat kursus."
+              data-img="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1000&auto=format&fit=crop&q=60"
+            >
+              <div
+                class="p-3 rounded-4 lift"
+                style="
+                  border: 1px solid rgba(148, 163, 184, 0.18);
+                  background: rgba(15, 23, 42, 0.55);
+                "
+              >
+                <img
+                  class="rounded-3 w-100"
+                  style="
+                    height: 160px;
+                    object-fit: cover;
+                    border: 1px solid rgba(148, 163, 184, 0.18);
+                  "
+                  alt="Sertifikat"
+                  src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1000&auto=format&fit=crop&q=60"
+                />
+                <div class="mt-3">
+                  <div class="fw-semibold">Sertifikat Kursus (contoh)</div>
+                  <div class="text-muted" style="font-size: 13px">
+                    Platform • 2025
+                  </div>
+                  <div class="mt-2 d-flex align-items-center gap-2">
+                    <span class="chip"><i class="bi bi-book"></i> Kursus</span>
+                    <button
+                      class="btn btn-sm btn-outline-secondary ms-auto"
+                      data-bs-toggle="modal"
+                      data-bs-target="#certModal"
+                    >
+                      Detail
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-12 col-md-6 col-lg-4 cert"
+              data-category="workshop"
+              data-title="Workshop (contoh)"
+              data-org="Kampus / Komunitas"
+              data-date="2025"
+              data-desc="Deskripsi singkat workshop yang diikuti."
+              data-img="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1000&auto=format&fit=crop&q=60"
+            >
+              <div
+                class="p-3 rounded-4 lift"
+                style="
+                  border: 1px solid rgba(148, 163, 184, 0.18);
+                  background: rgba(15, 23, 42, 0.55);
+                "
+              >
+                <img
+                  class="rounded-3 w-100"
+                  style="
+                    height: 160px;
+                    object-fit: cover;
+                    border: 1px solid rgba(148, 163, 184, 0.18);
+                  "
+                  alt="Sertifikat"
+                  src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1000&auto=format&fit=crop&q=60"
+                />
+                <div class="mt-3">
+                  <div class="fw-semibold">Workshop (contoh)</div>
+                  <div class="text-muted" style="font-size: 13px">
+                    Kampus / Komunitas • 2025
+                  </div>
+                  <div class="mt-2 d-flex align-items-center gap-2">
+                    <span class="chip"
+                      ><i class="bi bi-tools"></i> Workshop</span
+                    >
+                    <button
+                      class="btn btn-sm btn-outline-secondary ms-auto"
+                      data-bs-toggle="modal"
+                      data-bs-target="#certModal"
+                    >
+                      Detail
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-12 col-md-6 col-lg-4 cert"
+              data-category="award"
+              data-title="Penghargaan (contoh)"
+              data-org="Penyelenggara"
+              data-date="2024"
+              data-desc="Deskripsi singkat penghargaan/kompetisi."
+              data-img="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1000&auto=format&fit=crop&q=60"
+            >
+              <div
+                class="p-3 rounded-4 lift"
+                style="
+                  border: 1px solid rgba(148, 163, 184, 0.18);
+                  background: rgba(15, 23, 42, 0.55);
+                "
+              >
+                <img
+                  class="rounded-3 w-100"
+                  style="
+                    height: 160px;
+                    object-fit: cover;
+                    border: 1px solid rgba(148, 163, 184, 0.18);
+                  "
+                  alt="Sertifikat"
+                  src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1000&auto=format&fit=crop&q=60"
+                />
+                <div class="mt-3">
+                  <div class="fw-semibold">Penghargaan (contoh)</div>
+                  <div class="text-muted" style="font-size: 13px">
+                    Penyelenggara • 2024
+                  </div>
+                  <div class="mt-2 d-flex align-items-center gap-2">
+                    <span class="chip"
+                      ><i class="bi bi-award"></i> Penghargaan</span
+                    >
+                    <button
+                      class="btn btn-sm btn-outline-secondary ms-auto"
+                      data-bs-toggle="modal"
+                      data-bs-target="#certModal"
+                    >
+                      Detail
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-muted mt-3" style="font-size: 13px">
+            Cara tambah sertifikat: duplikasi blok <code>.cert</code>, ganti
+            atribut <code>data-*</code> + gambar.
+          </div>
+        </section>
+
+        <!-- KONTAK -->
+        <section id="kontak" class="section cardx p-4 lift">
+          <div class="kicker">Kontak</div>
+          <h2 class="title text-2xl md:text-3xl mt-1">Mari Terhubung</h2>
+          <p class="text-slate-600 mt-2">
+            Untuk kerja kelompok, kolaborasi project, atau diskusi akademik.
+          </p>
+
+          <div class="row g-3 mt-1">
+            <div class="col-12 col-lg-6">
+              <div
+                class="p-3 rounded-4"
+                style="border: 1px solid rgba(148, 163, 184, 0.18)"
+              >
+                <div class="fw-semibold">Info Kontak</div>
+                <div class="text-muted mt-2" style="font-size: 14px">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <i class="bi bi-envelope"></i>
+                    <span><!-- TODO -->email@contoh.com</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <i class="bi bi-telephone"></i>
+                    <span><!-- TODO -->+62 8xx-xxxx-xxxx</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-geo-alt"></i> <span><!-- TODO -->Kota</span>
+                  </div>
+                </div>
+                <div class="divider my-3"></div>
+                <div class="d-flex flex-wrap gap-2">
+                  <a
+                    class="btn btn-outline-secondary btn-sm"
+                    href="#"
+                    target="_blank"
+                    rel="noreferrer"
+                    ><i class="bi bi-github me-1"></i>GitHub</a
+                  >
+                  <a
+                    class="btn btn-outline-secondary btn-sm"
+                    href="#"
+                    target="_blank"
+                    rel="noreferrer"
+                    ><i class="bi bi-linkedin me-1"></i>LinkedIn</a
+                  >
+                  <a
+                    class="btn btn-primary btn-sm"
+                    href="mailto:email@contoh.com"
+                    ><i class="bi bi-send me-1"></i>Email</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div
+                class="p-3 rounded-4"
+                style="border: 1px solid rgba(148, 163, 184, 0.18)"
+              >
+                <div class="fw-semibold">Form Pesan (demo)</div>
+                <div class="text-muted" style="font-size: 13px">
+                  Hubungkan ke Google Forms / Formspree kalau mau benar-benar
+                  kirim.
+                </div>
+                <form
+                  class="mt-3"
+                  onsubmit="event.preventDefault(); alert('Demo saja — sambungkan ke service form ya!');"
+                >
+                  <div class="mb-2">
+                    <label class="form-label" style="font-size: 13px"
+                      >Nama</label
+                    >
+                    <input class="form-control" placeholder="Nama" required />
+                  </div>
+                  <div class="mb-2">
+                    <label class="form-label" style="font-size: 13px"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="email@contoh.com"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" style="font-size: 13px"
+                      >Pesan</label
+                    >
+                    <textarea
+                      class="form-control"
+                      rows="4"
+                      placeholder="Tulis pesan..."
+                      required
+                    ></textarea>
+                  </div>
+                  <button class="btn btn-outline-primary" type="submit">
+                    <i class="bi bi-check2-circle me-1"></i>Kirim
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center text-muted mt-4" style="font-size: 13px">
+            © <span id="year"></span> Ahnaf Ogy Pratista
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- MODAL SERTIFIKAT -->
+    <div class="modal fade" id="certModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title fw-semibold" id="certTitle">
+              Detail Sertifikat
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              id="certImg"
+              class="w-100 rounded-3"
+              style="
+                max-height: 380px;
+                object-fit: cover;
+                border: 1px solid rgba(148, 163, 184, 0.18);
+              "
+              alt="Gambar sertifikat"
+            />
+            <div class="mt-3">
+              <div class="text-muted" id="certMeta"></div>
+              <p class="mt-2" id="certDesc"></p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              data-bs-dismiss="modal"
+            >
+              Tutup
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- MODAL GAMBAR (UNTUK KEGIATAN AKADEMIK) -->
+    <div class="modal fade" id="imgModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title fw-semibold" id="imgModalTitle">
+              Dokumentasi
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              id="imgModalImg"
+              class="w-100 rounded-3 border"
+              style="max-height: 520px; object-fit: contain"
+              alt="Dokumentasi"
+            />
+            <div
+              class="text-muted mt-2"
+              id="imgModalCaption"
+              style="font-size: 14px"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="sources/script.js" defer></script>
+  </body>
+</html>

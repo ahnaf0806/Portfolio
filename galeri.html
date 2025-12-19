@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Galeri — Portofolio</title>
+
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="sources/style.css" />
+
+    <!-- Tailwind (preflight off biar ga bentrok) -->
+    <script>
+      tailwind = { config: { corePlugins: { preflight: false } } };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- (Opsional) CSS kecil khusus tampilan grid galeri -->
+    <style>
+      .gallery-card {
+        border: 1px solid rgba(148, 163, 184, 0.35);
+        border-radius: 14px;
+        padding: 12px;
+        background: rgba(15, 23, 42, 0.25);
+      }
+      .gallery-img {
+        width: 100%;
+        height: 210px;
+        object-fit: cover;
+        border-radius: 12px;
+        border: 1px solid rgba(148, 163, 184, 0.35);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="app">
+      <!-- Sidebar (desktop) -->
+      <aside class="sidebar cardx p-3 d-none d-lg-block">
+        <div class="fw-bold" style="font-size: 1.06rem">Menu</div>
+        <div class="divider my-3"></div>
+
+        <div class="d-grid gap-1">
+          <a class="navlink" href="index.html#profil"
+            ><i class="bi bi-house"></i> Beranda</a
+          >
+          <a class="navlink" href="index.html#nilai"
+            ><i class="bi bi-bar-chart-line"></i> Nilai Akademik</a
+          >
+          <!-- Tambah link ke kegiatan akademik -->
+          <a class="navlink" href="index.html#kegiatan-akademik"
+            ><i class="bi bi-journal-text"></i> Kegiatan Akademik</a
+          >
+          <a class="navlink" href="index.html#kontribusi"
+            ><i class="bi bi-building"></i> Kontribusi Kampus</a
+          >
+          <a class="navlink" href="index.html#luar-kampus"
+            ><i class="bi bi-globe"></i> Luar Kampus</a
+          >
+          <a class="navlink" href="index.html#sertifikat"
+            ><i class="bi bi-award"></i> Sertifikat</a
+          >
+          <a class="navlink" href="galeri.html"
+            ><i class="bi bi-images"></i> Galeri</a
+          >
+          <a class="navlink" href="index.html#kontak"
+            ><i class="bi bi-envelope"></i> Kontak</a
+          >
+        </div>
+      </aside>
+
+      <main class="d-grid gap-3">
+        <section class="cardx p-4 lift">
+          <div class="kicker">Galeri</div>
+          <h1 class="title text-3xl md:text-4xl mt-1">Dokumentasi Kegiatan</h1>
+          <p class="text-slate-600 mt-2 mb-0">
+            Foto diambil otomatis dari Google Sheets (link gambar direct dari
+            imgbb).
+          </p>
+
+          <div class="d-flex flex-wrap gap-2 mt-3">
+            <button
+              class="btn btn-sm btn-outline-primary"
+              data-gallery-filter="all"
+            >
+              Semua
+            </button>
+
+            <!-- Tambah tombol Akademik -->
+            <button
+              class="btn btn-sm btn-outline-primary"
+              data-gallery-filter="akademik"
+            >
+              Kegiatan Akademik
+            </button>
+
+            <button
+              class="btn btn-sm btn-outline-primary"
+              data-gallery-filter="kampus"
+            >
+              Kontribusi Kampus
+            </button>
+
+            <button
+              class="btn btn-sm btn-outline-primary"
+              data-gallery-filter="luar"
+            >
+              Luar Kampus
+            </button>
+
+            <button
+              class="btn btn-sm btn-outline-primary"
+              data-gallery-filter="sertifikat"
+            >
+              Sertifikat
+            </button>
+          </div>
+        </section>
+
+        <section class="cardx p-4 lift">
+          <div class="row g-3" id="galleryGrid"></div>
+          <div
+            class="text-muted mt-3"
+            style="font-size: 13px"
+            id="galleryStatus"
+          ></div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Modal preview gambar -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title fw-semibold" id="galleryModalTitle">
+              Dokumentasi
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              id="galleryModalImg"
+              class="w-100 rounded-3 border"
+              style="max-height: 520px; object-fit: contain"
+              alt="Dokumentasi"
+            />
+            <div
+              class="text-muted mt-2"
+              id="galleryModalMeta"
+              style="font-size: 13px"
+            ></div>
+            <div
+              class="text-muted mt-2"
+              id="galleryModalCaption"
+              style="font-size: 14px"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="sources/script.js" defer></script>
+  </body>
+</html>
