@@ -129,10 +129,6 @@ const KHS_DATA = {
 
 // ===================== IPK PROGRESS (AUTO DARI KHS) =====================
 function updateIpkProgress(sem) {
-  const ipkText = $("#ipkText");
-  const ipkBar = $("#ipkProgress");
-  if (!ipkText || !ipkBar) return;
-
   const d = KHS_DATA[String(sem)] || KHS_DATA["1"];
   const rawIpk = d.ipk || "0";
 
@@ -140,13 +136,24 @@ function updateIpkProgress(sem) {
   if (Number.isNaN(ipkValue)) return;
 
   const maxIpk = 4.0;
-  const progress = Math.min((ipkValue / maxIpk) * 100, 100);
+  const percent = Math.min((ipkValue / maxIpk) * 100, 100);
 
-  ipkText.textContent = `${ipkValue.toFixed(2)} / 4.00`;
+  const targets = [
+    { text: "#ipkTextTarget", bar: "#ipkProgressTarget" },
+    { text: "#ipkTextNilai", bar: "#ipkProgressNilai" },
+  ];
 
-  requestAnimationFrame(() => {
-    ipkBar.style.width = progress.toFixed(1) + "%";
-    ipkBar.setAttribute("aria-valuenow", String(ipkValue));
+  targets.forEach(({ text, bar }) => {
+    const t = document.querySelector(text);
+    const b = document.querySelector(bar);
+    if (!t || !b) return;
+
+    t.textContent = `${ipkValue.toFixed(2)} / 4.00`;
+
+    requestAnimationFrame(() => {
+      b.style.width = percent.toFixed(1) + "%";
+      b.setAttribute("aria-valuenow", ipkValue);
+    });
   });
 }
 
